@@ -56,6 +56,14 @@ class BinarySearchTree {
     return null;
   }
 
+  /**
+   * Case: Node to be deleted has two children:
+   * -> The in-order successor is the smallest node in the right subtree of the node to be deleted.
+   * -> The in-order predecessor, which is the largest node in the left subtree of the node to be deleted.
+   * We then replace the node to be deleted with its in-order successor (or predecessor),
+   * and delete the in-order successor (or predecessor) from its original position.
+   */
+
   remove(value) {
     if (!this.root) {
       return false;
